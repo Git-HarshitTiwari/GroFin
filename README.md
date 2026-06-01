@@ -216,46 +216,6 @@ GroFin handles:
 - MARKET order execution behavior depends on Binance Futures Testnet liquidity and may return `NEW` before execution details are updated.
 - Quantity and price values are handled using Python `Decimal` to avoid floating-point precision issues.
 
-## Screenshots to Capture
-
-Recommended screenshots for submission:
-
-1. CLI help screen:
-
-```powershell
-python -m grofin.cli --help
-```
-
-2. Order command help screen:
-
-```powershell
-python -m grofin.cli order --help
-```
-
-3. Successful MARKET order:
-
-```powershell
-python -m grofin.cli order --symbol BTCUSDT --side BUY --type MARKET --quantity 0.001
-```
-
-4. Successful LIMIT order:
-
-```powershell
-python -m grofin.cli order --symbol BTCUSDT --side SELL --type LIMIT --quantity 0.001 --price 120000
-```
-
-5. Validation error for missing LIMIT price:
-
-```powershell
-python -m grofin.cli order --symbol BTCUSDT --side BUY --type LIMIT --quantity 0.001
-```
-
-6. Log file output:
-
-```powershell
-Get-Content logs\grofin.log
-```
-
 ## Project Highlights
 
 GroFin demonstrates:
