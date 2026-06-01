@@ -2,7 +2,7 @@
 
 GroFin is a Python CLI trading bot for placing MARKET and LIMIT orders on Binance Futures Testnet USDT-M.
 
-It was built for the PrimeTrade AI trading automation assignment with a clean project structure, professional validation, logging, error handling, and a polished Typer + Rich terminal experience.
+It is built with a clean project structure, professional validation, logging, error handling, and a polished Typer + Rich terminal experience.
 
 ## Features
 
@@ -60,7 +60,7 @@ This separation makes the application easier to test, maintain, and extend.
 Open the project in VS Code:
 
 ```powershell
-cd D:\GroFin
+cd GroFin
 code .
 ```
 
@@ -146,6 +146,32 @@ GroFin prints:
 - Average price
 - Success or failure message
 
+## Screenshots
+
+### CLI Help
+
+![GroFin CLI help](screenshots/01-cli-help.png)
+
+### Order Command Help
+
+![GroFin order command help](screenshots/02-order-help.png)
+
+### MARKET Order Success
+
+![GroFin MARKET order success](screenshots/03-market-order-success.png)
+
+### LIMIT Order Success
+
+![GroFin LIMIT order success](screenshots/04-limit-order-success.png)
+
+### Validation Error
+
+![GroFin validation error](screenshots/05-validation-error.png)
+
+### Log File
+
+![GroFin log file output](screenshots/06-log-file.png)
+
 ## Logging
 
 GroFin writes logs to:
@@ -165,7 +191,7 @@ Logs include:
 
 Log files rotate automatically after they reach about 1 MB.
 
-For assignment submission, include a sanitized log file showing at least one successful MARKET order and one successful LIMIT order.
+For review or demonstration, include a sanitized log file showing at least one successful MARKET order and one successful LIMIT order.
 
 ## Error Handling
 
@@ -240,9 +266,9 @@ Relevant background:
 - Built RiskLens, a FastAPI financial risk platform for Nifty 50 stock tracking
 - Experience with REST APIs, JWT authentication, rate limiting, Docker, GitHub Actions CI/CD, and financial systems
 
-## Assignment Context
+## Project Highlights
 
-This project was built for PrimeTrade AI as a simplified trading automation application demonstrating:
+GroFin demonstrates:
 
 - Python fundamentals
 - REST API integration
