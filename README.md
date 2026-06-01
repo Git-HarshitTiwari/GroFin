@@ -256,16 +256,6 @@ python -m grofin.cli order --symbol BTCUSDT --side BUY --type LIMIT --quantity 0
 Get-Content logs\grofin.log
 ```
 
-## Author
-
-Harshit Tiwari  
-3rd Year IT Undergraduate, Nagpur
-
-Relevant background:
-
-- Built RiskLens, a FastAPI financial risk platform for Nifty 50 stock tracking
-- Experience with REST APIs, JWT authentication, rate limiting, Docker, GitHub Actions CI/CD, and financial systems
-
 ## Project Highlights
 
 GroFin demonstrates:
