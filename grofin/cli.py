@@ -5,6 +5,7 @@ Command-line interface for GroFin.
 from __future__ import annotations
 
 import logging
+from datetime import datetime
 from typing import Optional
 
 import typer
@@ -67,19 +68,31 @@ def _render_order_response(result: OrderResult) -> None:
     """Render the important Binance response fields."""
 
     response = result.response
+    update_time = _format_binance_time(response.get("updateTime"))
     table = Table(title="Binance Response Details", border_style="green")
     table.add_column("Field", style="bold")
     table.add_column("Value", style="white")
 
     table.add_row("Order ID", str(response.get("orderId", "N/A")))
+    table.add_row("Client Order ID", str(response.get("clientOrderId", "N/A")))
     table.add_row("Status", str(response.get("status", "N/A")))
     table.add_row("Executed Qty", str(response.get("executedQty", "N/A")))
     table.add_row("Average Price", str(response.get("avgPrice", "N/A")))
     table.add_row("Symbol", str(response.get("symbol", "N/A")))
     table.add_row("Side", str(response.get("side", "N/A")))
     table.add_row("Type", str(response.get("type", "N/A")))
+    table.add_row("Binance Update Time", update_time)
 
     console.print(table)
+
+
+def _format_binance_time(value: object) -> str:
+    """Convert Binance millisecond timestamps into readable local time."""
+
+    if not isinstance(value, int):
+        return "N/A"
+
+    return datetime.fromtimestamp(value / 1000).strftime("%Y-%m-%d %H:%M:%S")
 
 
 def _exit_with_error(message: str) -> None:
